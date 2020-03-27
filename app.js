@@ -1,7 +1,7 @@
 (function () {
   'use strict';
-  angular.module('DIApp', [])
 
+  angular.module('DIApp', [])
   .controller('DIController', DIController);
 
     function DIcontroller($scope, $filter) {
