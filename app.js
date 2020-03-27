@@ -2,7 +2,7 @@
   'use strict';
   angular.module('DIApp', [])
 
-  .controller('DIController', function ($scope) {
+  .controller('DIController', DIController);
 
     function DIcontroller($scope, $filter) {
       $scope.name = "LF14";
