@@ -8,8 +8,14 @@
   function MsgController($scope) {
     $scope.name = "LF14";
 
+    $scope.stateOfBeing = "Pikatchu";
+
     $scope.sayMessage  = function() {
-      return "LF14 likes to drink";
+      return "LF14 shows a pokemon!";
+    };
+
+    $scope.feedLF14 = function () {
+      $scope.stateOfBeing = "charizard";
     }
   }
 
