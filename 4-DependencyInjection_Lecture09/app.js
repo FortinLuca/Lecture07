@@ -5,10 +5,10 @@
   .controller('DIController', DIController);
 
   function DIController($scope, $filter) {
-    $scope.name = "LF14";
+    $scope.name = "lf14";
 
     $scope.upper = function() {
-      var upCase = $filter('upperCase');
+      var upCase = $filter('uppercase');
       $scope.name = upCase($scope.name);
     };
   }
@@ -18,5 +18,5 @@
   }
 
   console.log(AnnonateMe());
-  
+
 })();
