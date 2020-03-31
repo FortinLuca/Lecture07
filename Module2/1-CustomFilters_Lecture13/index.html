@@ -9,16 +9,17 @@
       font-size: 1.2em;
     }
     </style>
-    <title>Filters</title>
+    <title>Custom Filters</title>
   </head>
   <body>
-    <h1>Filters</h1>
+    <h1>Custom Filters</h1>
     <div ng-controller='MsgController'>
-      Message is: <br>
-      {{sayMessage()}}
+      Original: {{sayMessage()}} <br>
+      New: {{sayIllustrateMessage()}} <br>
+      Truth: {{sayIllustrateMessage() | truth : 'an animal' : 'a pokemon' }} <br>
+      Big Truth: {{sayIllustrateMessage() | truth : 'an animal' : 'a pokemon' | uppercase }}
       <div>
         <button ng-click="feedLF14()">Feed LF14</button>
-        Cost: {{pokemonCost | currency : "#blah" : 4 }}
         <br>
         <img ng-src="images/{{stateOfBeing}}.png">
       </div>

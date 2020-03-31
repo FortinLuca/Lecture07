@@ -1,24 +1,27 @@
 (function () {
   'use strict';
 
-  angular.module('MsgApp', [])
-  .controller('MsgController', MsgController);
+  angular.module('CounterApp', [])
 
-  MsgController.$inject = ['$scope', '$filter'];
-  function MsgController($scope, $filter) {
-    $scope.name = "LF14";
-    $scope.stateOfBeing = "Pikatchu";
-    $scope.pokemonCost = .45;
+  .controller('CounterController', function ($scope) {
+    $scope.counter = 0;
 
-    $scope.sayMessage  = function() {
-      var msg = "LF14 shows a pokemon!";
-      var output = $filter('uppercase')(msg);
-      return output;
+    $scope.upCounter = function() {
+      setTimeout(function() {
+        $scope.$apply(function() {
+        $scope.counter++;
+        console.log("counter incremented");
+      });
+      }, 2000);
     };
 
-    $scope.feedLF14 = function () {
-      $scope.stateOfBeing = "charizard";
-    }
-  }
+    // $scope.upCounter = function() {
+    //   setTimeout( function() {
+    //     $scope.counter++;
+    //     console.log("counter incremented");
+    //     $scope.$digest();
+    //   }, 2000);
+    // };
 
+  });
 })();
